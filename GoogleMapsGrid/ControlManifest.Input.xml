@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<manifest>
+  <control namespace="jPCF" constructor="GoogleMapsGrid" version="0.0.2" display-name-key="GoogleMapsGrid_Display_Key" description-key="GoogleMapsGrid_Desc_Key" control-type="standard"  preview-image="images/gmaps_thumb.png">
+    <!-- dataset node represents a set of entity records on CDS; allow more than one datasets -->
+    <data-set name="mapDataSet" display-name-key="mapDataSet_Display_Key">
+      <!-- 'property-set' node represents a unique, configurable property that each record in the dataset must provide. -->
+      <!-- UNCOMMENT TO ADD PROPERTY-SET NODE
+      <property-set name="samplePropertySet" display-name-key="Property_Display_Key" description-key="Property_Desc_Key" of-type="SingleLine.Text" usage="bound" required="true" />
+      -->
+    </data-set>
+    <property name="primaryFieldName" display-name-key="MapGrid_primaryField_Display_Key" description-key="MapGrid_primaryField_Desc_Key" of-type="SingleLine.Text" usage="input" required="true"  default-value="name"/>
+    <property name="latFieldName" display-name-key="MapGrid_latField_Display_Key" description-key="MapGrid_latField_Desc_Key" of-type="SingleLine.Text" usage="input" required="true"  default-value="address1_latitude"/>
+    <property name="longFieldName" display-name-key="MapGrid_longField_Display_Key" description-key="MapGrid_longField_Desc_Key" of-type="SingleLine.Text" usage="input" required="true" default-value="address1_longitude"/>
+    <property name="googleMapsAPIKey" display-name-key="MapGrid_googleMapsAPIKey_Display_Key" description-key="MapGrid_googleMapsAPIKey_Desc_Key" of-type="SingleLine.Text" usage="input" required="true"  />
+    <resources>
+      <code path="index.ts" order="1"/>
+      <css path="css/GoogleMapsGrid.css" order="1" />
+      <resx path="strings/GoogleMapsGrid.1033.resx" version="1.0.0" />
+    </resources>
+    <!-- UNCOMMENT TO ENABLE THE SPECIFIED API
+    <feature-usage>
+      <uses-feature name="Device.captureAudio" required="true" />
+      <uses-feature name="Device.captureImage" required="true" />
+      <uses-feature name="Device.captureVideo" required="true" />
+      <uses-feature name="Device.getBarcodeValue" required="true" />
+      <uses-feature name="Device.getCurrentPosition" required="true" />
+      <uses-feature name="Device.pickFile" required="true" />
+      <uses-feature name="Utility" required="true" />
+      <uses-feature name="WebAPI" required="true" />
+    </feature-usage>
+    -->
+  </control>
+</manifest>

@@ -1,0 +1,31 @@
+.infotable {
+    border-collapse: collapse;
+    table-layout: fixed;
+    vertical-align: middle;
+    text-align: center;
+}
+.infotd {
+    border-collapse: collapse;
+    table-layout: fixed;
+    vertical-align: middle;
+    text-align: left;
+    font-weight: normal;
+    font-size:initial;
+    padding-left: 0.7em;
+    padding-bottom: 0.5em;
+}
+.infoth {
+    border-collapse: collapse;
+    table-layout: fixed;
+    vertical-align: middle;
+    text-align: right;
+    font-weight: bold;
+    font-size: initial;
+    padding-bottom: 0.5em;
+}
+.infoTitle {
+    vertical-align: middle;
+    text-align: center;
+    font-weight: bold;
+    font-size: initial;
+}
