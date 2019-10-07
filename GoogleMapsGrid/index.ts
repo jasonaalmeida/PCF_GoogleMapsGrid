@@ -5,7 +5,7 @@ type DataSet = ComponentFramework.PropertyTypes.DataSet;
 interface mapOptions {
     zoom: number;
     scrollwheel: boolean;
-    center?: google.maps.LatLng;
+    center?: google.maps.LatLng; 
 }
 
 
@@ -96,7 +96,6 @@ export class GoogleMapsGrid implements ComponentFramework.StandardControl<IInput
                 //do nothing because we have set the center as 0 0 as a backup
             });
         }
-
     }
 
 
