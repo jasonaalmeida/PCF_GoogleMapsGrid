@@ -112,6 +112,7 @@ export class GoogleMapsGrid implements ComponentFramework.StandardControl<IInput
         var dataSet = context.parameters.mapDataSet;
         let latField: string = context.parameters.latFieldName.raw ? context.parameters.latFieldName.raw : "";
         let longField: string = context.parameters.longFieldName.raw ? context.parameters.longFieldName.raw : "";
+        let nameField: string = context.parameters.primaryFieldName.raw ? context.parameters.primaryFieldName.raw : "";
 
         if (dataSet == null || latField == "" || longField == "") {
             return;
@@ -128,7 +129,7 @@ export class GoogleMapsGrid implements ComponentFramework.StandardControl<IInput
             var marker = new google.maps.Marker({
                 position: myLatLng,
                 map: this.gMap,
-                title: record.getValue("name") as any
+                title: record.getValue(nameField) as any
             });
 
             google.maps.event.addListener(marker, 'click', (function (marker, content) {
